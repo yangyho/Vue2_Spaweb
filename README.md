@@ -6,7 +6,8 @@
 
 ``` bash
 # install dependencies
-npm install
+npm install 
+根据配置package.josn下载依赖包
 
 # serve with hot reload at localhost:8080
 npm run dev
