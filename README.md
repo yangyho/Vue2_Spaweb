@@ -22,3 +22,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
     Vue2教程 http://www.jianshu.com/p/5ba253651c3b
     Vue2官方 https://vuefe.cn/vue-router/api/options.html
+    Webpack中文网 https://webpack2.leanapp.cn/concepts/index/
