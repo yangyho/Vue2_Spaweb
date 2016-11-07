@@ -11,8 +11,10 @@ import tree from './component/three.vue';
 import four from './component/four.vue';
 import five from './component/five.vue';
 
-// 引入初始化样式
+// 引入初始化样式文件
 require('./assets/css/normalize.css');
+// 引入vuex文件
+// require('./assets/js/Vuex_Test.js');
 
 //开启debug模式
 Vue.config.debug = true;
