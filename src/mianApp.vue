@@ -105,4 +105,12 @@
         background: #000;
         transition: all 1s;
     }
+    
+    .author{
+        animation: rotateLogo infinite 2s linear; /** 匀速 循环**/
+    }
+    @keyframes rotateLogo{
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
 </style>
