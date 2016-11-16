@@ -12,27 +12,27 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue',
+        loader: 'vue-loader',
         options: {
           // vue-loader options go here
         }
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
         test: /\.css$/,
-        loader: "style!css"
+        loader: "style-loader!css-loader"
       },
       {
         test: /\.(eot|woff|woff2|ttf)([\?]?.*)$/,
-        loader: "file"
+        loader: "file-loader"
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file',
+        loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]'
         }
