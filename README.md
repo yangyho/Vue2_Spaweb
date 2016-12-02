@@ -1,25 +1,8 @@
-# vue2
-
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install 
-根据配置package.josn下载依赖包
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
+##安装依赖
+    npm install
+##开发预览
+    npm run dev
 ##Vue2&&webpack参考链接
-
-    Vue2教程 http://www.jianshu.com/p/5ba253651c3b
-    Vue2官方 https://vuefe.cn/vue-router/api/options.html
-    Webpack中文网 https://webpack2.leanapp.cn/concepts/index/
+    [Vue2.0 新手完全填坑攻略——从环境搭建到发布](http://www.jianshu.com/p/5ba253651c3b)
+    [Vue2官方](https://vuefe.cn/vue-router/api/options.html)
+    [Webpack中文网](https://webpack2.leanapp.cn/concepts/index/)
