@@ -36,6 +36,13 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.md$/,
+        loader: 'file-loader',
+        query: {
+            name: 'md/[name].[ext]'
+        }
       }
     ]
   },

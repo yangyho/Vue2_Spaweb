@@ -13,6 +13,7 @@ import five from './component/five.vue';
 
 // 引入初始化样式文件
 require('./assets/css/normalize.css');
+// require('./assets/js/jquery-1.10.2.min.js')
 // 引入vuex文件
 // require('./assets/js/Vuex_Test.js');
 
