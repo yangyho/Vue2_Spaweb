@@ -64,7 +64,7 @@
         float: left;
     }
     #warpper{
-        width: 1200px;
+        width: 960px;
         margin: 0 auto;
     }
     .header{
