@@ -1,6 +1,6 @@
 ### 前端巧用$.get()将markdown文件内容读取，并直接显示在页面上
 
-2016-11-14 liujians
+2016-11-14 yangyuh
 
 最近在研究如何不依赖hexo或者Jekyll在github上搭建自己的博客
 
@@ -65,8 +65,6 @@ webpack配置
 1. 写好md文件
 2. 在文章列表页加一个链接
 3. 传入文件名给文章页
-
-![](http://ogo5zlrgk.bkt.clouddn.com/get_file_1.png)
 
 ___
 本文出自————[http://liujians.me](http://liujians.me)
