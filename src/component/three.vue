@@ -4,42 +4,44 @@
     <!-- <a> written by {{ author }} </a> -->
     <h3>读取md文件内容</h3>
     <ul>
-      <li v-for="article in articles" @click="getFileName(article.name)"><a href="#">{{article.name}}</a></li>
+      <li v-for="article in articles" @click="getFileName(article.name)"><a href="#">{{article.title}}</a></li>
     </ul>
     <div class="content"></div>
   </div>
 </template>
 
 <script>
+  import Remarkable from 'remarkable'
   export default {
     data() {
       return {
         author: "yangyh",
         articles: [{
-          name:"$get_file"
+          title: "README1.md",
+          name: "README1"
         },{
-          name:"duoshuo_init"
+          title: "README2.md",
+          name: "README2"
         }]
       }
     },
     methods:{
       // 获取md文件名
-      getFileName: function(name){
-        let mdURL = "'../assets/md/" + name + ".md'"
-        console.log(mdURL)
-        return mdURL
+      getFileName: function(fname){
+        this.Query(fname);
+      },
+      // 查询
+      Query: function(fname){
+        let md = new Remarkable();
+        let mdURL = '../src/assets/md/' + fname + '.md';
+        $.get(mdURL,function(text){
+          $(".content").html(md.render(text))
+        })
       }
     },
     mounted (){
-      let vm = this;
-      var Remarkable = require('remarkable');
-      var md = new Remarkable();
-      let url = vm.getFileName()
-      console.log(url)
-      var file = require('../assets/md/duoshuo_init.md');
-      $.get(file).success(text=>{
-        $(".content").html(md.render(text).replace(/^img_01^/,"<img src='/static/img/get_file_1.png' class='img-responsive' />"))
-      })
+      let fname = "README1";
+      this.Query(fname);
     }
   }
 

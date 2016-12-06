@@ -1,22 +1,18 @@
-import Vue from 'vue';
-import VueRouter from "vue-router";
-import VueResource from 'vue-resource';
-
+import Vue from 'vue'
+import VueRouter from "vue-router"
+import VueResource from 'vue-resource'
 
 //引入组件
-import mianApp from './mianApp.vue';
-import firstcomponent from './component/firstcomponent.vue';
-import secondcomponent from './component/secondcomponent.vue';
-import tree from './component/three.vue';
-import four from './component/four.vue';
-import five from './component/five.vue';
+import mianApp from './mianApp.vue'
+import firstcomponent from './component/firstcomponent.vue'
+import secondcomponent from './component/secondcomponent.vue'
+import tree from './component/three.vue'
+import four from './component/four.vue'
+import five from './component/five.vue'
 
-// 引入初始化样式文件
-require('./assets/css/normalize.css');
+// 引入样式表
+import './assets/css/normalize.css'
 import './assets/css/mdCode.css'
-// require('./assets/js/jquery-1.10.2.min.js')
-// 引入vuex文件
-// require('./assets/js/Vuex_Test.js');
 
 //开启debug模式
 Vue.config.debug = true;
@@ -25,40 +21,29 @@ Vue.config.debug = true;
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
-// 定义组件, 也可以像教程之前教的方法从别的文件引入
-const First = { template: '<div><h2>我是第 1 个子页面</h2></div>' }
-
-// 创建一个路由器实例
-// 并且配置路由规则
+// 创建一个路由器实例，并且配置路由规则
 const router = new VueRouter({
   mode: 'history', 
   base: __dirname,//格式路径#
-  routes: [
-  	{
+  routes: [{
       path: '/', 
       component: firstcomponent //默认加载
-    },
-    {
+    },{
       path: '/first',
       component: firstcomponent
-    },
-    {
+    },{
       path: '/second',
       component: secondcomponent
-    },
-    {
+    },    {
       path: '/tree',
-      component: tree
-    },
-    {
+      component: tree,
+    },{
       path: '/four',
       component: four
-    },
-    {
+    },{
       path: '/five',
       component: five
-    }
-  ]
+    }]
 })
 
 // 现在我们可以启动应用了！
