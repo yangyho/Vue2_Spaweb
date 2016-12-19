@@ -1,7 +1,7 @@
 <template>
   <div id="secondcomponent">
-    <!-- <h1>跳转到第三页</h1> -->
-    <!-- <a> written by {{ author }} </a> -->
+    <h1>跳转到第三页</h1>
+    <a> written by {{ author }} </a>
     <h3>读取md文件内容</h3>
     <ul>
       <li v-for="article in articles" @click="getFileName(article.name)"><a href="#">{{article.title}}</a></li>
