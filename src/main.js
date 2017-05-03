@@ -1,18 +1,14 @@
 import Vue from 'vue'
 import VueRouter from "vue-router"
 import VueResource from 'vue-resource'
-
-//引入组件
 import mianApp from './mianApp.vue'
-import firstcomponent from './component/firstcomponent.vue'
-import secondcomponent from './component/secondcomponent.vue'
-import tree from './component/three.vue'
-import four from './component/four.vue'
-import five from './component/five.vue'
+
 
 // 引入样式表
 import './assets/css/normalize.css'
 import './assets/css/mdCode.css'
+import routes from './assets/js/router.js'
+
 
 //开启debug模式
 Vue.config.debug = true;
@@ -25,42 +21,12 @@ Vue.use(VueResource);
 const router = new VueRouter({
   mode: 'history', 
   base: __dirname,//格式路径#
-  routes: [{
-      path: '/', 
-      component: firstcomponent //默认加载
-    },{
-      path: '/first',
-      component: firstcomponent
-    },{
-      path: '/second',
-      component: secondcomponent
-    },    {
-      path: '/tree',
-      component: tree,
-    },{
-      path: '/four',
-      component: four
-    },{
-      path: '/five',
-      component: five
-    }]
+  routes: routes
 })
 
-// 现在我们可以启动应用了！
 // 路由器会创建一个 mianApp 实例，并且挂载到选择符.$mount() #app 匹配的元素上。
 const app = new Vue({
   router: router,
   render: h => h(mianApp) 
 }).$mount('#app') //将App组件渲染到index.html，id=#app的div里面
 
-
-
-
-
-
-
-
-// new Vue({
-//   el: '#app',
-//   render: h => h(App)
-// })
